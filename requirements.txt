@@ -1,4 +1,7 @@
 streamlit>=1.40
+# starlette 1.4.0 made GZipResponder's thread_minimum_size a required kwarg,
+# which breaks streamlit's gzip middleware (every request 500s). Pin below it.
+starlette<1.4
 joblib>=1.4
 scikit-learn>=1.8
 pandas>=2.2
